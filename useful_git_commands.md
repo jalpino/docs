@@ -1,4 +1,5 @@
-General Items
+###General Items
+<pre>
 # Update Stale Repo credentials (on Windows)
 # if you have your credentials stored in your git shell and you have recently changed
 # your password, this command will prompt you to supply your new credentials
@@ -26,8 +27,10 @@ git clone -b <branch_name> <repo_url>
   
 # Cherry Pick a commit onto your branch. Make sure you are on the branch that will receive the commit
 git cherry-pick <commit_hash>
+</pre>
   
-Patching
+###Patching
+<pre>
 # There are several ways to create a patch. Replace <your_patch_file.patch> with the file name and/or path to the file name if it does not reside in the same folder that you are executing the commands.
   
 # Create a patch from a commit
@@ -44,8 +47,10 @@ git apply --check <your_patch_file.patch>
   
 # Apply the patch
 git apply <your_patch_file.patch>
+</pre>
 
-Branch Management
+###Branch Management
+<pre>
 # Create a new branch (myfeature) from develop
 git checkout -b myfeature develop
   
@@ -81,10 +86,12 @@ git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refnam
 # This can help us gather a simple list of what has been changed
 git log --oneline --no-merges <taggname_or_commit_hash>..HEAD
  
- 
 # Find the common ancestor (commit) between two branches
 git merge-base <branch-A> <branch-B>
-Tag Management
+</pre>
+
+###Tag Management
+<pre>
 # Create a tag with comments
 git tag -a <release_number> -m "<your_comments>"
   
@@ -96,8 +103,11 @@ git tag -d <release_number>
   
 # Remove the tag from origin
 git push origin :refs/tags/<release_number>
-Git Aliases
+</pre>
+
+### Git Aliases
 Git aliases provide short cuts to otherwise lengthy commands, saving you some key strokes for useful functionality. Aliases should be placed in your local, global Git configuration under the [alias] section. Git config can be found under your user home directory (i.e. c:\users\<your_username>\.gitconfig)
+<pre>
 [alias]
   prune = fetch --prune
   # Removes local branches that don't exist on the remote origin
@@ -113,10 +123,12 @@ Git aliases provide short cuts to otherwise lengthy commands, saving you some ke
  
   glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   # Displays a colorful, concise version of the git log for the current branch
+</pre>
 
-Diff Management
+###Diff Management
 The following is a set of configuration changes that you can make to your local, global, Git configuration to enhance the diff process when using the command line for Git operations. 
 The following assumes that you have downloaded and installed BeyondCompare version 3. 
+<pre>
 # Apply the following settings to your .gitconf file, found in your home, user directory (i.e. c:\users\<your_username>\.gitconfig
 # Change the location of the install path to your diff tool listed below.
 [diff]
@@ -130,8 +142,11 @@ cmd = \"C:/opt/BeyondCompare3/bcomp.exe\" "$LOCAL" "$REMOTE"
   
 # Suppress whitespace changes when using git diff
 git diff -w
-Other
+</pre>
+
+###Other
 Random/Miscellaneous commands
+<pre>
 # Get a list of commits by person
 git shortlog
   
@@ -153,3 +168,4 @@ git log --all --oneline --no-merges --author=<your_email_address>
   
 # View all commits made today
 git log --since=00:00:00 --all --no-merges --oneline
+</pre>
