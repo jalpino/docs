@@ -1,4 +1,4 @@
-###General Items
+### General Items
 <pre>
 # Update Stale Repo credentials (on Windows)
 # if you have your credentials stored in your git shell and you have recently changed
@@ -29,7 +29,7 @@ git clone -b <branch_name> <repo_url>
 git cherry-pick <commit_hash>
 </pre>
   
-###Patching
+### Patching
 <pre>
 # There are several ways to create a patch. Replace <your_patch_file.patch> with the file name and/or path to the file name if it does not reside in the same folder that you are executing the commands.
   
@@ -49,7 +49,7 @@ git apply --check <your_patch_file.patch>
 git apply <your_patch_file.patch>
 </pre>
 
-###Branch Management
+### Branch Management
 <pre>
 # Create a new branch (myfeature) from develop
 git checkout -b myfeature develop
@@ -90,7 +90,7 @@ git log --oneline --no-merges <taggname_or_commit_hash>..HEAD
 git merge-base <branch-A> <branch-B>
 </pre>
 
-###Tag Management
+### Tag Management
 <pre>
 # Create a tag with comments
 git tag -a <release_number> -m "<your_comments>"
@@ -125,7 +125,7 @@ Git aliases provide short cuts to otherwise lengthy commands, saving you some ke
   # Displays a colorful, concise version of the git log for the current branch
 </pre>
 
-###Diff Management
+### Diff Management
 The following is a set of configuration changes that you can make to your local, global, Git configuration to enhance the diff process when using the command line for Git operations. 
 The following assumes that you have downloaded and installed BeyondCompare version 3. 
 <pre>
@@ -144,7 +144,7 @@ cmd = \"C:/opt/BeyondCompare3/bcomp.exe\" "$LOCAL" "$REMOTE"
 git diff -w
 </pre>
 
-###Other
+### Other
 Random/Miscellaneous commands
 <pre>
 # Get a list of commits by person
